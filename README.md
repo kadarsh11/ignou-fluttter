@@ -1,8 +1,2 @@
-# ignou
-
-A new Flutter project.
-
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+## IGNOU 
+A updated IGNOU app made with Flutter Framework.
