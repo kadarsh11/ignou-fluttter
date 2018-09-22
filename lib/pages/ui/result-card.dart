@@ -20,8 +20,6 @@ class ResultCard extends StatelessWidget{
     @override
   Widget build(BuildContext context) {
 
-    final Widget emptyWidget = new Container(width: 0.0, height: 0.0);
-
       final planetThumbnail = new Container(
       alignment: new FractionalOffset(0.0, 0.5),
       margin: const EdgeInsets.only(left: 10.0),
@@ -56,12 +54,12 @@ class ResultCard extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-              (assignment=="-" || assignment=="") ? emptyWidget : _circleMarks("Asgn.",assignment,Colors.deepOrangeAccent),
-              (lab1=="-" || lab1=="") ? emptyWidget : _circleMarks("Lab 1",lab1,Colors.deepOrangeAccent),
-              (lab2=="-" || lab2=="") ? emptyWidget : _circleMarks("Lab 1",lab2,Colors.deepOrangeAccent),
-              (lab3=="-" || lab3=="") ? emptyWidget : _circleMarks("Lab 1",lab3,Colors.deepOrangeAccent),
-              (lab4=="-" || lab4=="") ? emptyWidget : _circleMarks("Lab 1",lab4,Colors.deepOrangeAccent),
-              (theory=="-" || theory=="") ? emptyWidget : _circleMarks("Theory",theory,Colors.deepOrangeAccent),
+              (assignment=="-" || assignment=="") ? Container() : _circleMarks("Asgn.",assignment,Colors.deepOrangeAccent),
+              (lab1=="-" || lab1=="") ? Container() : _circleMarks("Lab 1",lab1,Colors.deepOrangeAccent),
+              (lab2=="-" || lab2=="") ? Container() : _circleMarks("Lab 1",lab2,Colors.deepOrangeAccent),
+              (lab3=="-" || lab3=="") ? Container() : _circleMarks("Lab 1",lab3,Colors.deepOrangeAccent),
+              (lab4=="-" || lab4=="") ? Container() : _circleMarks("Lab 1",lab4,Colors.deepOrangeAccent),
+              (theory=="-" || theory=="") ? Container() : _circleMarks("Theory",theory,Colors.deepOrangeAccent),
               ],
             ),
           ],
