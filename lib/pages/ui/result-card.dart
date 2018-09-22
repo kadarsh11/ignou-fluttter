@@ -4,10 +4,25 @@ import 'package:flutter/material.dart';
 
 class ResultCard extends StatelessWidget{
 
+   final String course;
+   final String assignment;
+   final String lab1;
+   final String lab2;
+   final String lab3;
+   final String lab4;
+   final String theory;
+   final String tPractical;
+   final String tTheory;
+   final String status;
+
+  ResultCard({this.course,this.assignment,this.lab1,this.lab2,this.lab3,this.lab4,this.theory,this.tTheory,this.tPractical,this.status});
+
     @override
   Widget build(BuildContext context) {
 
-    final planetThumbnail = new Container(
+    final Widget emptyWidget = new Container(width: 0.0, height: 0.0);
+
+      final planetThumbnail = new Container(
       alignment: new FractionalOffset(0.0, 0.5),
       margin: const EdgeInsets.only(left: 10.0),
       child: Container(
@@ -20,7 +35,7 @@ class ResultCard extends StatelessWidget{
     final planetCard = new Container(
       margin: const EdgeInsets.only(left: 50.0, right: 0.0),
       decoration: new BoxDecoration(
-        color: Colors.greenAccent,
+        color: status.toLowerCase()=="completed"? Colors.greenAccent : Colors.redAccent,
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
       ),
@@ -31,7 +46,7 @@ class ResultCard extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Center(
-              child: new Text("MCS-012",style: TextStyle(
+              child: new Text(course,style: TextStyle(
                 color: Colors.white,
                 fontSize: 18.0,
                 fontWeight: FontWeight.bold,
@@ -41,9 +56,12 @@ class ResultCard extends StatelessWidget{
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                _circleMarks("Lab 1","55",Colors.deepOrangeAccent),
-                _circleMarks("Theory","75",Colors.blueAccent),
-                _circleMarks("Theory","75",Colors.purpleAccent),
+              (assignment=="-" || assignment=="") ? emptyWidget : _circleMarks("Asgn.",assignment,Colors.deepOrangeAccent),
+              (lab1=="-" || lab1=="") ? emptyWidget : _circleMarks("Lab 1",lab1,Colors.deepOrangeAccent),
+              (lab2=="-" || lab2=="") ? emptyWidget : _circleMarks("Lab 1",lab2,Colors.deepOrangeAccent),
+              (lab3=="-" || lab3=="") ? emptyWidget : _circleMarks("Lab 1",lab3,Colors.deepOrangeAccent),
+              (lab4=="-" || lab4=="") ? emptyWidget : _circleMarks("Lab 1",lab4,Colors.deepOrangeAccent),
+              (theory=="-" || theory=="") ? emptyWidget : _circleMarks("Theory",theory,Colors.deepOrangeAccent),
               ],
             ),
           ],
@@ -69,12 +87,13 @@ class ResultCard extends StatelessWidget{
 
     Widget _circleText(){
     return CircleAvatar(
-      backgroundColor: Colors.green,
-      child: Text("A",
-      style: TextStyle(fontSize: 30.0,color: Colors.white),),);
+      backgroundColor: status.toLowerCase()=="completed"? Colors.green : Colors.red,
+      child: status.toLowerCase()=="completed"?Icon(Icons.done_all,color: Colors.white,size:53.0) :
+                                               Icon(Icons.clear,color: Colors.white,size:53.0)                
+      );
   }
-
-  Widget _circleMarks(String type,String marks,Color color){
+ 
+  Widget _circleMarks( final String type, final String marks,Color color){
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [Container(
