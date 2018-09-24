@@ -67,13 +67,14 @@ class ResultCard extends StatelessWidget{
       ),
     );
 
-    return new Container(
-      height: 150.0,
+    return 
+    Container(
+      height: 160.0,
       margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       child: new FlatButton(
         onPressed: () => "Hola",
 
-        child: new Stack(
+        child: Stack(
           children: <Widget>[
             planetCard,
             planetThumbnail

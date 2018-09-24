@@ -160,13 +160,29 @@ class HomePage extends State<Home>{
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-       appBar: AppBar(
-         title: Text("IGNOU",style: TextStyle(color: Colors.black),),
-         elevation: 0.0,
-         centerTitle: true,
-         backgroundColor: Colors.white,
-       ),
-       body: Container(
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            SliverAppBar(
+              backgroundColor: Colors.black,
+              expandedHeight: 200.0,
+              floating: false,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Text("IGNOU",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      )),
+                  background: Image.network(
+                    "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&h=350",
+                    fit: BoxFit.cover,
+                  )),
+            ),
+          ];
+        },
+        body: Container(
          color: Colors.white,
          child: Center(
            child: GridView.count(
@@ -175,6 +191,7 @@ class HomePage extends State<Home>{
            ),
          ),
        ),
+      ),
      );
   }
 
@@ -204,6 +221,8 @@ class HomePage extends State<Home>{
               height: 200.0,
               width: 200.0,
               decoration: new BoxDecoration(
+              shape: BoxShape.rectangle,
+              borderRadius: new BorderRadius.circular(8.0),
               gradient: new LinearGradient(colors: [gradientEnd,gradientStart],
                   begin: const FractionalOffset(0.5, 0.0),
                   end: const FractionalOffset(0.0, 0.5),
