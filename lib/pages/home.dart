@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import './news.dart';
-import './books.dart';
 import './semester.dart';
-import './grade.dart';
 import './result.dart';
 
 class Home extends StatefulWidget{
@@ -16,9 +14,7 @@ class Home extends StatefulWidget{
 }
 
 class HomePage extends State<Home>{
-
-
-
+  
   @override
   void initState() {
   super.initState();
