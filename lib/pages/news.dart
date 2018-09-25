@@ -1,93 +1,296 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:timeago/timeago.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
-class News extends StatefulWidget{
+class News extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-   return NewsState();
+    return NewsState();
   }
 }
 
-class NewsState extends State<News>{
+class NewsState extends State<News> with SingleTickerProviderStateMixin {
+  String urlIgnou =
+      "https://newsapi.org/v2/everything?q=ignou&apiKey=6368e6c64862409b8a2bfd5f9e6b0477";
 
-  NewsBuilder newsBuilder;
+  String urlJob =
+      "https://newsapi.org/v2/everything?q=job&apiKey=6368e6c64862409b8a2bfd5f9e6b0477";
+
+  Newshub newshubIgnou;
+  Newshub newshubJob;
+  final FlutterWebviewPlugin flutterWebviewPlugin = new FlutterWebviewPlugin();
+
+  TabController tabController;
 
   @override
   void initState() {
-  super.initState();
-  getData();
+    flutterWebviewPlugin.close();
+    super.initState();
+    fetchDataIgnou();
+    fetchDataJob();
+    tabController = new TabController(length: 2, vsync: this);
   }
 
-  getData()  async{
-    String url="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=6368e6c64862409b8a2bfd5f9e6b0477";
-    var res= await http.get(url);
-    var decodedJson= jsonDecode(res.body);
-    newsBuilder= NewsBuilder.fromJson(decodedJson);
+  fetchDataIgnou() async {
+    var res = await http.get(urlIgnou);
+    var decodedJson = jsonDecode(res.body);
+    newshubIgnou = Newshub.fromJson(decodedJson);
     setState(() {});
+  }
+  
+  fetchDataJob() async {
+    var res = await http.get(urlJob);
+    var decodedJson = jsonDecode(res.body);
+    newshubJob = Newshub.fromJson(decodedJson);
+    setState(() {});
+  }
+
+  @override
+  void dispose() {
+    flutterWebviewPlugin.dispose();
+
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: newsBuilder==null? Center(
-        child: CircularProgressIndicator(),
-      ):_buildCard(context),       
-
-       bottomNavigationBar:BottomNavigationBar(
-         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.backup), 
-            title: Text("Ignou"),
-            ),
-            BottomNavigationBarItem(
-            icon: Icon(Icons.mail), 
-            title: Text("Tech"),
-            ),
-         ],
-       )
-    );
-  }
-
-  Widget _buildCard(BuildContext context){
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0)
+      appBar: AppBar(
+        title: Text("news",style: TextStyle(color: Colors.black),),
+        centerTitle: true,
+        backgroundColor: Colors.white,
       ),
-      child: Column(
-          children:[
-             Row(
-               children:[            
-              ListTile(
-                title: Text("Add-on courses from IGNOU making rural students job-ready",style: TextStyle(fontWeight: FontWeight.bold),),
-                subtitle: Text("Regional Director says fee waiver for SC, ST students also becomes an advantage"),
+        body: newshubIgnou == null || newshubJob==null
+            ? Center(child: CircularProgressIndicator())
+            : TabBarView(
+                controller: tabController,
+                children: <Widget>[
+                  ListView.builder(
+                    itemCount: newshubIgnou == null ? 0 : newshubIgnou.articles.length,
+                    padding: new EdgeInsets.all(8.0),
+                    itemBuilder: (BuildContext context, int index) {
+                      return _newsIgnouLayout(index, context);
+                    },
+                  ),
+                  ListView.builder(
+                    itemCount: newshubJob == null ? 0 : newshubJob.articles.length,
+                    padding: new EdgeInsets.all(8.0),
+                    itemBuilder: (BuildContext context, int index) {
+                      return _newsJobLayout(index, context);
+                    },
+                  ),
+                ],
               ),
-          ]),
-          Row(
-            children: <Widget>[
-              Text("2018-09-20T13:00:56Z"),
-              FilterChip(
-                onSelected: (bool value) {}, 
-                backgroundColor: Colors.red,
-                label: Text("Indianexpress.com",style: TextStyle(color: Colors.white)),
-              )
-          ],)
-        ]
+        bottomNavigationBar: new Material(
+          child: new TabBar(
+            controller: tabController,
+            tabs: <Widget>[
+              new Tab(
+                child: Center(
+                  child: Text(
+                    "Ignou",
+                    style: TextStyle(color: Colors.green, fontSize: 21.0),
+                  ),
+                ),
+              ),
+              Tab(
+                child: Center(
+                  child: Text(
+                    "Job",
+                    style: TextStyle(color: Colors.deepPurple, fontSize: 21.0),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ));
+  }
+
+  Widget _newsIgnouLayout(int index, BuildContext context) {
+    return Card(
+      elevation: 1.7,
+      child: new Padding(
+        padding: new EdgeInsets.all(10.0),
+        child: new Column(
+          children: [
+            new Row(
+              children: <Widget>[
+                new Padding(
+                  padding: new EdgeInsets.only(left: 4.0),
+                  child: new Text(
+                    newshubIgnou.articles[index].publishedAt,
+                    style: new TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ),
+                new Padding(
+                  padding: new EdgeInsets.all(5.0),
+                  child: new Text(
+                    newshubIgnou.articles[index].source.name,
+                    style: new TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            new Row(
+              children: [
+                new Expanded(
+                  child: new GestureDetector(
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        new Padding(
+                          padding: new EdgeInsets.only(
+                              left: 4.0, right: 8.0, bottom: 8.0, top: 8.0),
+                          child: new Text(newshubIgnou.articles[index].title,
+                              style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              maxLines: 3),
+                        ),
+                        new Padding(
+                          padding: new EdgeInsets.only(
+                              left: 4.0, right: 4.0, bottom: 4.0),
+                          child: new Text(newshubIgnou.articles[index].description,
+                              style: new TextStyle(
+                                color: Colors.grey[500],
+                              ),
+                              maxLines: 4),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+                      print("Hols");
+                    },
+                  ),
+                ),
+                new Column(
+                  children: <Widget>[
+                    new Padding(
+                      padding: new EdgeInsets.only(top: 8.0),
+                      child: new SizedBox(
+                        height: 100.0,
+                        width: 100.0,
+                        child: new Image.network(
+                          newshubIgnou.articles[index].urlToImage,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
+        ), ////
       ),
     );
   }
 
+ Widget _newsJobLayout(int index, BuildContext context) {
+    return Card(
+      elevation: 1.7,
+      child: new Padding(
+        padding: new EdgeInsets.all(10.0),
+        child: new Column(
+          children: [
+            new Row(
+              children: <Widget>[
+                new Padding(
+                  padding: new EdgeInsets.only(left: 4.0),
+                  child: new Text(
+                    newshubJob.articles[index].publishedAt,
+                    style: new TextStyle(
+                      fontWeight: FontWeight.w400,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ),
+                new Padding(
+                  padding: new EdgeInsets.all(5.0),
+                  child: new Text(
+                    newshubJob.articles[index].source.name,
+                    style: new TextStyle(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            new Row(
+              children: [
+                new Expanded(
+                  child: new GestureDetector(
+                    child: new Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        new Padding(
+                          padding: new EdgeInsets.only(
+                              left: 4.0, right: 8.0, bottom: 8.0, top: 8.0),
+                          child: new Text(newshubJob.articles[index].title,
+                              style: new TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                              maxLines: 3),
+                        ),
+                        new Padding(
+                          padding: new EdgeInsets.only(
+                              left: 4.0, right: 4.0, bottom: 4.0),
+                          child: new Text(newshubJob.articles[index].description,
+                              style: new TextStyle(
+                                color: Colors.grey[500],
+                              ),
+                              maxLines: 4),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+                      print("Hols");
+                    },
+                  ),
+                ),
+                new Column(
+                  children: <Widget>[
+                    new Padding(
+                      padding: new EdgeInsets.only(top: 8.0),
+                      child: new SizedBox(
+                        height: 100.0,
+                        width: 100.0,
+                        child: new Image.network(
+                          newshubJob.articles[index].urlToImage,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
+        ), ////
+      ),
+    );
+  }
 }
 
 
-class NewsBuilder {
+class Newshub {
   String status;
   int totalResults;
   List<Articles> articles;
 
-  NewsBuilder({this.status, this.totalResults, this.articles});
+  Newshub({this.status, this.totalResults, this.articles});
 
-  NewsBuilder.fromJson(Map<String, dynamic> json) {
+  Newshub.fromJson(Map<String, dynamic> json) {
     status = json['status'];
     totalResults = json['totalResults'];
     if (json['articles'] != null) {
