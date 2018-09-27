@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 import './news.dart';
-import './semester.dart';
-import './result.dart';
+import './books/semester.dart';
+import './question/semester.dart';
+import './grade.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -120,7 +121,7 @@ class HomePage extends State<Home> {
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Semester()));
+                          MaterialPageRoute(builder: (context) => QuestionSemester()));
                     },
                   ),
                   Divider(),
@@ -162,7 +163,7 @@ class HomePage extends State<Home> {
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Result()));
+                          MaterialPageRoute(builder: (context) => Grade(course: "BCA",)));
                     },
                   ),
                   Divider(),

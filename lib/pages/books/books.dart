@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './generic/books.dart';
+import '../generic/books.dart';
 
-import './ui/books-download.dart';
+import '../ui/books-download.dart';
 
 class BooksList extends StatelessWidget {
   final Books books;
