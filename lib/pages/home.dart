@@ -193,7 +193,7 @@ class HomePage extends State<Home> {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              backgroundColor: Colors.black,
+              backgroundColor: Colors.white,
               expandedHeight: 200.0,
               floating: false,
               pinned: true,
@@ -201,11 +201,11 @@ class HomePage extends State<Home> {
                   centerTitle: true,
                   title: Text("IGNOU",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Colors.deepPurpleAccent,
                         fontSize: 16.0,
                       )),
-                  background: Image.network(
-                    "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&h=350",
+                  background: Image.asset(
+                    "asset/hero.jpg",
                     fit: BoxFit.cover,
                   )),
             ),

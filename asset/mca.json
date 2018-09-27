@@ -1,0 +1,168 @@
+{
+  "status": "MCA",
+  "semester": "5",
+  "course": [
+  	{
+      "semester": "1",
+      "code": "MCS11",
+      "name": "Problem Solving and Programming",
+      "download":"https://drive.google.com/open?id=1tjkN_DnaFpOJXyyScOOWpOqlhPpH_Ncj"
+    },
+    {
+      "semester": "1",
+      "code": "MCS12",
+      "name": "Computer Organization and Assembly Language Programming",
+      "download":"https://drive.google.com/open?id=1ewXpItOkQN-_r3F3lMKXhWffarYWJYfo"
+    },
+{
+      "semester": "1",
+      "code": "MCS13",
+      "name": "Discrete Mathematics",
+      "download":"https://drive.google.com/open?id=1NrXIpdgVeWZCiVdy1skv81WVOGY1NlHP"
+    },
+    {
+      "semester": "1",
+      "code": "MCS14",
+      "name": "Systems Analysis and Design",
+      "download":"https://drive.google.com/open?id=10HghBLcz4EcinJ7LHopVtBTemmlSazcy"
+    },
+    {
+      "semester": "1",
+      "code": "MCS15",
+      "name": "Communication Skills",
+      "download":"https://drive.google.com/open?id=1XhJBr-0bYK0xreYu_RwgoJ8gPRVBo_RW"
+    },
+    {
+      "semester": "1",
+      "code": "MCSL16",
+      "name": "Internet Concepts and Web Design",
+      "download":"https://drive.google.com/open?id=1hkFzD2vqkIC_KspIHTNqP0FIsSHwwYUk"
+    },
+    {
+      "semester": "1",
+      "code": "MCSL17",
+      "name": "C and Assembly Language Programming Lab",
+      "download":"https://drive.google.com/open?id=1RXhdRrLxPseWIjEUa-Zkp69Vj0v7iXeI"
+    },
+    {
+      "semester": "2",
+      "code": "MCS21",
+      "name": "Data and File Structures and Programming",
+      "download":"https://drive.google.com/open?id=1gkVJZO8q5IRGn22VectZ95kRHqHhFUbt"
+    },
+    {
+      "semester": "2",
+      "code": "MCS23",
+      "name": "Introduction to Database Management Systems",
+      "download":"https://drive.google.com/open?id=1irXvq7gXA9T9QQ-C-vy6CktkBCH94raQ"
+    },
+    {
+      "semester": "2",
+      "code": "MCS24",
+      "name": "Object Oriented Technologies and Java Programming",
+      "download":"https://drive.google.com/open?id=1pYFMBoJbseyigkRAhi5UCE_HNJQZqwp8"
+    },
+    {
+      "semester": "2",
+      "code": "MCSL25",
+      "name": "Lab (based on MCS-021, 022, 023 and 024)",
+      "download":"https://drive.google.com/open?id=1VviiGs06hUcjq0XOMzuP3GyzuZeRUfyH"
+    },
+    {
+      "semester": "3",
+      "code": "MCS31",
+      "name": "Design and Analysis of Algorithms",
+      "download":"https://drive.google.com/open?id=1LPqBsxpsQB5URVKT7WD8w4fIjFcwaXEP"
+    },
+    {
+      "semester": "3",
+      "code": "MCS32",
+      "name": "Object Oriented Analysis and Design",
+      "download":"https://drive.google.com/open?id=1niU9RRqruysQKhG-HkfnI8hKlPCuHpD1"
+    },
+    {
+      "semester": "3",
+      "code": "MCS33",
+      "name": "Advanced Discrete Mathematics",
+      "download":"https://drive.google.com/open?id=14qyEMvKIleiX8qUxpvOA-n-1ztvqxiHu"
+    },
+    {
+      "semester": "3",
+      "code": "MCS35",
+      "name": "Accountancy and Financial Management",
+      "download":"https://drive.google.com/open?id=1ufR7IsOrE59SK3ELx8x4rduNeFrTNdsK"
+    },
+    {
+      "semester": "3",
+      "code": "MCSL36",
+      "name": "Lab (based on MCS-032, 034 and 035)",
+      "download":"https://drive.google.com/open?id=1OkIY8PuBq7kj6CoF00mClRLcjfCad4lR"
+    },
+    {
+      "semester": "4",
+      "code": "MCS41",
+      "name": "Operating Systems",
+      "download":"https://drive.google.com/open?id=1OLyUOJ-CyeFh3MMD3rBdkEBzaSLKOPEa"
+    },
+    {
+      "semester": "4",
+      "code": "MCS42",
+      "name": "Data Communication and Computer Networks",
+      "download":"https://drive.google.com/open?id=1vsuQvaKoSu-F2iA1m0GVdlQXiHDksDGB"
+    },
+    {
+      "semester": "4",
+      "code": "MCS43",
+      "name": "Advanced Database Mathematics Management Systems",
+      "download":"https://drive.google.com/open?id=1SfayFJRGVmaSlim0NG3V24J5R81Y2Uap"
+    },
+    {
+      "semester": "4",
+      "code": "MCS44",
+      "name": "Mini Project",
+      "download":"https://drive.google.com/open?id=1EDJanBumK1kASSa67TyihfoATPvkiiV0"
+    },
+    {
+      "semester": "4",
+      "code": "MCSL45",
+      "name": "Lab (UNIX and Oracle)",
+      "download":"https://drive.google.com/open?id=1T4xrttI72VTeEC7MLBnY0VSlqtSOqoRy"
+    },
+    {
+      "semester": "5",
+      "code": "MCS52",
+      "name": "Principles of Management and Information systems",
+      "download":"https://drive.google.com/open?id=1P0Uz0Jv6f9vVXm2PxeURHRBxRcUuNfyz"
+    },
+    {
+      "semester": "5",
+      "code": "MCS53",
+      "name": "Computer Graphics and Multimedia",
+      "download":"https://drive.google.com/open?id=1xdIBrqWnJ4bqNttd_LrGUoSDLk9HsWrf"
+    },
+    {
+      "semester": "5",
+      "code": "MCSL54",
+      "name": "Lab (based on MCS-051 and 053)",
+      "download":"https://drive.google.com/open?id=13hDIqqZVvSLkBthEWuL1E8k90RuZj-GG"
+    },
+    {
+      "semester": "5",
+      "code": "MCSE3",
+      "name": "Artificial Intelligence and Knowledge Management",
+      "download":"https://drive.google.com/open?id=1pVgVDQYUfZdXDd0wgauEA61fzQwOBPjq"
+    },
+    {
+      "semester": "5",
+      "code": "MCSE4",
+      "name": "Numerical and Statistical Computing",
+      "download":"https://drive.google.com/open?id=14R0v0ZXCf13Lm-LTYlMcaOljnUOuHWyA"
+    },
+    {
+      "semester": "5",
+      "code": "MCSE11",
+      "name": "Parallel Computing",
+      "download":"https://drive.google.com/open?id=1PnV0wKUdQLlYZU_Z33lAcUy_32-WGcV8"
+    }
+   ]
+}

@@ -19,13 +19,15 @@ class Result extends StatefulWidget {
 class ResultState extends State<Result> with SingleTickerProviderStateMixin {
   final String course;
   final String enrollmentNo;
+  int totalCourse;
+  int completedCourse=0;
+  double percentage;
   ResultState({this.course, this.enrollmentNo});
   String name;
   TabController tabController;
   List data = [];
   bool isLoading = true;
   bool isError = false;
-  double percentage = 0.0;
 
   @override
   void initState() {
@@ -50,6 +52,9 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
       int last = jsonBody.length;
       for (i = 2; i < jsonBody.length - 1; i++) {
         data.add(jsonBody[i]);
+        if(jsonBody[i][7].toLowerCase() == "completed"){
+          completedCourse=completedCourse+1;
+        }
       }
       Map<String, dynamic> details = jsonBody[0];
       print(details);
@@ -57,6 +62,9 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
       var nameSplit = nameExtract.split(':');
       name = nameSplit[1];
       print(jsonBody[last - 1][0] / ((last - 3) * 100));
+      percentage=((jsonBody[last - 1][0] / ((last - 3) * 100))*100);
+      print(percentage.toStringAsFixed(0));
+      totalCourse=last-3;
       setState(() {
         isLoading = false;
       });
@@ -99,11 +107,11 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
               ]..addAll(_completedList())),
               ListView(
                   children: [
-                Text("ALl"),
+                stats(),
               ]..addAll(_allList())),
               ListView(
                   children: [
-                Text("NOtCompleted"),
+                stats(),
               ]..addAll(_notCompletedList())),
             ]),
             bottomNavigationBar: new Material(
@@ -221,7 +229,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text.rich(TextSpan(children: [
-                        TextSpan(text: "98",style: TextStyle(color: Colors.white,fontSize: 28.0)),
+                        TextSpan(text: "23",style: TextStyle(color: Colors.white,fontSize: 28.0)),
                         TextSpan(text: " %",style: TextStyle(color: Colors.white,fontSize: 20.0)),
                       ])),
                       Text("Percentage",style: TextStyle(color: Colors.white))
@@ -241,8 +249,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text.rich(TextSpan(children: [
-                        TextSpan(text: "2",style: TextStyle(color: Colors.white,fontSize: 28.0)),
-                        TextSpan(text: "9",style: TextStyle(color: Colors.white,fontSize: 28.0)),
+                        TextSpan(text: "$totalCourse",style: TextStyle(color: Colors.white,fontSize: 28.0)),
                       ])),
                       Text("Total ",style: TextStyle(color: Colors.white))
                     ],
@@ -266,7 +273,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text.rich(TextSpan(children: [
-                        TextSpan(text: "15",style: TextStyle(color: Colors.white,fontSize: 28.0)),
+                        TextSpan(text: "$completedCourse",style: TextStyle(color: Colors.white,fontSize: 28.0)),
                       ])),
                       Text("Completed ",style: TextStyle(color: Colors.white))
                     ],
@@ -285,7 +292,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text.rich(TextSpan(children: [
-                        TextSpan(text: "7",style: TextStyle(color: Colors.white,fontSize: 28.0)),
+                        TextSpan(text: "${totalCourse-completedCourse}",style: TextStyle(color: Colors.white,fontSize: 28.0)),
                       ])),
                       Text("Not Completed ",style: TextStyle(color: Colors.white))
                     ],

@@ -1,0 +1,216 @@
+{
+  "status": "BCA",
+  "semester": "5",
+  "course": [
+    {
+      "semester": "1",
+      "code": "ECO-01",
+      "name": "Business Organization",
+      "download": "https://drive.google.com/open?id=1QGr559gCKoBwQfN6um9qH7BhBB5gZuGO"
+    },
+    {
+      "semester": "1",
+      "code": "FEG-02",
+      "name": "Foundation course in English-2",
+      "download": "https://drive.google.com/open?id=1EzxocLmS1SPdXTndfnekIJnKrwL7--n5"
+    },
+    {
+      "semester": "1",
+      "code": "BCS-011",
+      "name": "Computer Basics and PC Software",
+      "download": "https://drive.google.com/open?id=1hCSouTWdqwspmlmAfl-BFlDr7cuOS2lC"
+    },
+    {
+      "semester": "1",
+      "code": "BCS-012",
+      "name": "Basic Mathematics",
+      "download": "https://drive.google.com/open?id=1AwHiAHiiR7JXP5a4sjfZkVHoIE5xoDUz"
+    },
+    {
+      "semester": "1",
+      "code": "BCSL-013",
+      "name": "Computer Basics and PC Software Lab",
+      "download": "https://drive.google.com/open?id=12R-z5mr2GSzum2bMCRIqwXMcgkeGWRB9"
+    },
+   {
+      "semester": "2",
+      "code": "ECO-02",
+      "name": "Accountancy-1",
+      "download":"https://drive.google.com/open?id=1Ai8kLCfmEBnfe3y1Aq_fzmt7cwAzP4Is"
+    },
+    {
+      "semester": "2",
+      "code": "MCS-011",
+      "name": "Problem Solving and Programming",
+      "download": "https://drive.google.com/open?id=1WdDPDIhOf8NiaDT_VtfN7cRrw_2Oxv-e"
+    },
+    {
+      "semester": "2",
+      "code": "MCS-012",
+      "name": "Computer Organization and Assembly Language Programming",
+      "download": "https://drive.google.com/open?id=1YHKdk2lChwkfsXTzU5X8gOFIXSWnpFmk"
+    },
+    {
+      "semester": "2",
+      "code": "MCS-015",
+      "name": "Communication Skills ",
+      "download": "https://drive.google.com/open?id=1N1a-xyXLQzXLYQdr54FTeyL7Vo0A5VD1"
+    },
+    {
+      "semester": "2",
+      "code": "MCS-013",
+      "name": "Discrete Mathematics ",
+      "download": "https://drive.google.com/open?id=12Mo6XU9ZbAbL1-4xiAMq8CVHma6_IA4O"
+    },
+    {
+      "semester": "2",
+      "code": "BCSL-021",
+      "name": "C Language Programming Lab",
+      "download": "https://drive.google.com/open?id=1mQHeCHnDJnOPfS8w39217HFhS_SXXUwQ"
+    },
+    {
+      "semester": "2",
+      "code": "BCSL-022",
+      "name": "Assembly Language Programming Lab",
+      "download": "https://drive.google.com/open?id=1MDpW_ms98J_fTvfF4ZfUd8kySitJFvRq"
+    },
+    {
+      "semester": "3",
+      "code": "MCS-021",
+      "name": "Data and File Structures",
+      "download": "https://drive.google.com/open?id=1KGRJMUjTjNs9_WnQcE_rrB3mLEmi-8vd"
+    },
+    {
+      "semester": "3",
+      "code": "MCS-023",
+      "name": "Introduction to Database Management Systems",
+      "download": "https://drive.google.com/open?id=1ZFuBEfQTOIvfrYpBPY6baU8pR5rF0kzO"
+    },
+    {
+      "semester": "3",
+      "code": "MCS-014",
+      "name": "Systems Analysis and Design",
+      "download": "https://drive.google.com/open?id=1f_o3ZOlfDaseVkBmktI2445DAxhQPBBt"
+    },
+    {
+      "semester": "3",
+      "code": "BCS-031",
+      "name": "Programming in C++",
+      "download": "https://drive.google.com/open?id=1QAJ-NoZugiyJqanqSRsEJX0R1SOTgNI4"
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-032",
+      "name": "C++ Programming Lab",
+      "download": "https://drive.google.com/open?id=16gCgHN3sgdxkx1AnY_JQ6zd22QYRyy4C"
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-033",
+      "name": "Data and File Structures Lab",
+      "download": "https://drive.google.com/open?id=1DjCX2J-YyB2npVr6-HHdJnbjaqf9YFlh"
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-034",
+      "name": "DBMS Lab",
+      "download": "https://drive.google.com/open?id=1aiuo_oGSKo4oJ1Re1UGl6E0UiOb8456L"
+    },
+    {
+      "semester": "4",
+      "code": "BCS-040",
+      "name": "Statistical Techniques",
+      "download": "https://drive.google.com/open?id=1g-SOCkR358oToAI06S42If_m0Eo2Xfiy"
+    },
+    {
+      "semester": "4",
+      "code": "MCS-024",
+      "name": "Object Oriented Technologies and Java Programming",
+      "download": "https://drive.google.com/open?id=1zXrSVi1Ud7N7sBDJZiBe2MzucW_oyPZx"
+    },
+    {
+      "semester": "4",
+      "code": "BCS-041",
+      "name": "Fundamentals of Computer Networks",
+      "download": "https://drive.google.com/open?id=14s5eQo-hwFBJITfUQvrMN_zu7oIUMdgM"
+    },
+    {
+      "semester": "4",
+      "code": "BCS-042",
+      "name": "Introduction to Algorithm Design",
+      "download": "https://drive.google.com/open?id=1kWM0k1s-OPK85ucOpVqDkBVcANLCf6GF"
+    },
+    {
+      "semester": "4",
+      "code": "MCSL-016",
+      "name": "Internet Concepts and Web Design",
+      "download": "https://drive.google.com/open?id=1ymfw8RuiAu77raxb1mYlt1luvPcNp7Gq"
+    },
+    {
+      "semester": "4",
+      "code": "BCSL-043",
+      "name": "Java Programming Lab",
+      "download": "https://drive.google.com/open?id=13e0RNKMTKrSMAuTa8VHLjKp0j2HsUi6V"
+    },
+    {
+      "semester": "4",
+      "code": "BCSL-044",
+      "name": "Statistical Techniques Lab",
+      "download": "https://drive.google.com/open?id=1PF9LcwNYxENvV82ozxX3DsHdmZNFpPwp"
+    },
+    {
+      "semester": "4",
+      "code": "BCSL-045",
+      "name": "Algorithm Design Lab",
+      "download": "https://drive.google.com/open?id=1Za67Zo9jrIoef-eo-CAbUjCKD6eMrnfU"
+    },
+    {
+      "semester": "5",
+      "code": "BCS-051 ",
+      "name": " Introduction to Software Engineering",
+      "download": "https://drive.google.com/open?id=10gKx5oeShFGroLSYJ7rxSczbA5G1Bm35"
+    },
+    {
+      "semester": "5",
+      "code": "BCS-052",
+      "name": "Network Programming and Administration",
+      "download": "https://drive.google.com/open?id=1PJFXrIqxzPhngB4P-EIfNozMS6M9vWqc"
+    },
+    {
+      "semester": "5",
+      "code": "BCS-053",
+      "name": "Web Programming",
+      "download": "https://drive.google.com/open?id=1EdgqO6jCt7i0QZiMpqz1hM9PI_YpE4G_"
+    },
+    {
+      "semester": "5",
+      "code": "BCS-054",
+      "name": "Computer Oriented Numerical Techniques",
+      "download": "https://drive.google.com/open?id=1UJMm56Nmm67-DV5dZ9IkHSlb7baAHjkv"
+    },
+    {
+      "semester": "5",
+      "code": "BCS-055",
+      "name": "Business Communication",
+      "download": "https://drive.google.com/open?id=1dfDNDWDXcQtvdpjNrVc0mJRRLT9pJIO-"
+    },
+    {
+      "semester": "5",
+      "code": "BCSL-056",
+      "name": "Network Programming and Administration Lab",
+      "download": "https://drive.google.com/open?id=1kKvcA75sE718ZLbj0g8Vt-q6ExeqdClY"
+    },
+    {
+      "semester": "5",
+      "code": "BCSL-057 ",
+      "name": "Web Programming Lab",
+      "download": "https://drive.google.com/open?id=1I4_BiFvrLBDcbCHHINqT_Oj7WjFI5guc"
+    },
+    {
+      "semester": "5",
+      "code": "BCSL-058",
+      "name": "Computer Oriented Numerical Techniques Lab ",
+      "download": "https://drive.google.com/open?id=1UbDs98PJedpKn4LrlSxszXKExhFPJkCb"
+    }
+     ]
+}
