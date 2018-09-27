@@ -26,6 +26,15 @@ class ResultCard extends StatelessWidget {
       this.tPractical,
       this.status});
 
+  void _showAlert(BuildContext context) {
+AlertDialog dialog = new AlertDialog(
+  content: new Container(
+    child: Text("hola"),
+  )
+  );
+    showDialog(context: context,child: dialog);
+}
+
   @override
   Widget build(BuildContext context) {
     final planetThumbnail = new Container(
@@ -126,18 +135,19 @@ class ResultCard extends StatelessWidget {
         ),
       ),
     );
-
     return Container(
       height: 140.0,
       margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       child: new FlatButton(
-        onPressed: () => "Hola",
+        onPressed: (){_showAlert(context);},
         child: Stack(
           children: <Widget>[planetCard, planetThumbnail],
         ),
       ),
     );
   }
+
+
 
   Widget _circleText() {
     return CircleAvatar(
@@ -187,6 +197,7 @@ class ResultCard extends StatelessWidget {
       )
     ]);
   }
+  
 }
 
 class MyPainter extends CustomPainter {

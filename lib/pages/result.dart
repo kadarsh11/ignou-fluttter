@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import './ui/exception.dart';
 import 'dart:convert';
 import './ui/result-card.dart';
 
@@ -21,7 +22,8 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
   final String enrollmentNo;
   int totalCourse;
   int completedCourse=0;
-  double percentage;
+  var percentage;
+  
   ResultState({this.course, this.enrollmentNo});
   String name;
   TabController tabController;
@@ -46,6 +48,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
     String url =
         'https://www.myroomad.com/ignou/latest.php?program=$course&eno=$enrollmentNo&submit=submit';
     try {
+      double per;
       var result = await http.get(url);
       var jsonBody = jsonDecode(result.body);
       int i = 0;
@@ -62,8 +65,9 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
       var nameSplit = nameExtract.split(':');
       name = nameSplit[1];
       print(jsonBody[last - 1][0] / ((last - 3) * 100));
-      percentage=((jsonBody[last - 1][0] / ((last - 3) * 100))*100);
-      print(percentage.toStringAsFixed(0));
+      per=((jsonBody[last - 1][0] / ((last - 3) * 100))*100);
+      print(per.toStringAsFixed(0));
+      percentage=per.toStringAsFixed(0);
       totalCourse=last-3;
       setState(() {
         isLoading = false;
@@ -73,6 +77,12 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
       setState(() {
         isError = true;
       });
+      Navigator.pop(context);
+      Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ExceptionUi(),
+                ));
     }
   }
 
@@ -86,7 +96,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
               ))
             : Scaffold(
                 body: Center(
-                child: CircularProgressIndicator(),
+                 child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.red))
               ))
         : Scaffold(
             appBar: AppBar(
@@ -229,7 +239,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text.rich(TextSpan(children: [
-                        TextSpan(text: "23",style: TextStyle(color: Colors.white,fontSize: 28.0)),
+                        TextSpan(text: "$percentage",style: TextStyle(color: Colors.white,fontSize: 28.0)),
                         TextSpan(text: " %",style: TextStyle(color: Colors.white,fontSize: 20.0)),
                       ])),
                       Text("Percentage",style: TextStyle(color: Colors.white))

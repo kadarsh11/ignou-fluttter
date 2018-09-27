@@ -65,7 +65,7 @@ class HomePage extends State<Home> {
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Semester()));
+                          MaterialPageRoute(builder: (context) => Semester(course: "bca",)));
                     },
                   ),
                   Divider(),
@@ -74,6 +74,10 @@ class HomePage extends State<Home> {
                     title: Text("MCA",
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Master of Computer Application"),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Semester(course: "mca",)));
+                    },
                   ),
                   Divider(),
                   ListTile(

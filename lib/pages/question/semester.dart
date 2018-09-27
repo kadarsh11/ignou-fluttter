@@ -3,6 +3,7 @@ import 'dart:convert';
 import '../generic/question-gen.dart';
 import 'package:http/http.dart' as http;
 import 'question.dart';
+import '../ui/exception.dart';
 
 class QuestionSemester extends StatefulWidget {
   @override
@@ -32,10 +33,20 @@ class SemesterState extends State<QuestionSemester> {
   }
 
   fetchData() async {
+    try{
     var res = await http.get(url);
     var decodedJson = jsonDecode(res.body);
     questionHub = QuestionHub.fromJson(decodedJson);
     setState(() {});
+    }
+    catch(e){
+      Navigator.pop(context);
+      Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ExceptionUi(),
+                ));
+    }
   }
 
   @override

@@ -38,6 +38,9 @@ flutter:
 
   assets:
     - asset/hero.jpg
+    - asset/something_went_wrong.png
+    - asset/something_went_wrong_1.png
+    - asset/loading.gif
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

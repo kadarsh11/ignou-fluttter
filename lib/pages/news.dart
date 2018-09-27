@@ -4,6 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:timeago/timeago.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import './ui/exception.dart';
 
 class News extends StatefulWidget {
   @override
@@ -35,17 +36,34 @@ class NewsState extends State<News> with SingleTickerProviderStateMixin {
   }
 
   fetchDataIgnou() async {
+    try{
     var res = await http.get(urlIgnou);
     var decodedJson = jsonDecode(res.body);
     newshubIgnou = Newshub.fromJson(decodedJson);
-    setState(() {});
+    setState(() {});}catch(e){
+      Navigator.pop(context);
+      Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ExceptionUi(),
+                ));
+    }
   }
   
   fetchDataJob() async {
+    try{
     var res = await http.get(urlJob);
     var decodedJson = jsonDecode(res.body);
     newshubJob = Newshub.fromJson(decodedJson);
-    setState(() {});
+    setState(() {});}
+    catch(e){
+      Navigator.pop(context);
+      Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ExceptionUi(),
+                ));
+    }
   }
 
   @override

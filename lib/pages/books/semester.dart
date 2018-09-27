@@ -3,17 +3,23 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'books.dart';
 import '../generic/books.dart';
+import '../ui/exception.dart';
 
 class Semester extends StatefulWidget {
+
+  final String course;
+  Semester({this.course});
+
   @override
   State<StatefulWidget> createState() {
-    return SemesterState();
+    return SemesterState(course: course);
   }
 }
 
 class SemesterState extends State<Semester> {
-  var url = 'https://api.myjson.com/bins/12n6z0';
-
+  
+  String course;
+  SemesterState({this.course});
   Books books;
   List<Color> gridColor = [
     Colors.deepPurpleAccent,
@@ -32,17 +38,27 @@ class SemesterState extends State<Semester> {
   }
 
   fetchData() async {
+    try{
+    String url = 'https://raw.githubusercontent.com/kadarsh11/ignou-fluttter/master/asset/$course.json';
     var res = await http.get(url);
     var decodedJson = jsonDecode(res.body);
     books = Books.fromJson(decodedJson);
-    setState(() {});
+    setState(() {});}
+    catch(e){
+      Navigator.pop(context);
+      Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ExceptionUi(),
+                ));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: books == null
-            ? Center(child: CircularProgressIndicator())
+            ? Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.purple)))
             : GridView.count(
                 crossAxisCount: 3,
                 children: List.generate(int.tryParse(books.semester),

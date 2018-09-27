@@ -28,7 +28,17 @@ class GradeState extends State<Grade> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        backgroundColor: Colors.white,
+      appBar: AppBar(
+                backgroundColor: Colors.white,
+                leading: Icon(
+                  Icons.sentiment_very_satisfied,
+                  color: Colors.deepPurpleAccent,
+                  size: 32.0,
+                ),
+                title: Text(
+                  "Enrollment Number",
+                  style: TextStyle(color: Colors.deepPurpleAccent),
+                )),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Form(
@@ -37,17 +47,24 @@ class GradeState extends State<Grade> {
               children: <Widget>[
                 TextFormField(
                   decoration:
-                      new InputDecoration(labelText: "Enter your number"),
+                      new InputDecoration(labelText: "Enter your Enrollment"),
                   keyboardType: TextInputType.number,
                   controller: myController,
                   validator: (value) {
                     if (value.isEmpty) {
                       return 'Please enter Your Enrollment No';
                     }
+                    if(value.length != 9){
+                      return 'Check Your Enrollment No again';
+                    }
                   },
                 ),
+                Container(height: 20.0,),
                 Center(
                   child: RaisedButton(
+                    padding: EdgeInsets.symmetric(horizontal: 40.0,vertical: 12.0),
+                    color: Colors.deepPurpleAccent,
+                    textColor: Colors.white,
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
                         print(myController.text);
