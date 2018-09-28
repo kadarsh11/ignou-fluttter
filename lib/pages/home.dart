@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:simple_permissions/simple_permissions.dart';
 import './news.dart';
 import './books/semester.dart';
 import './question/semester.dart';
@@ -16,7 +16,19 @@ class HomePage extends State<Home> {
   @override
   void initState() {
     super.initState();
+    checkPermission();
     insertData();
+  }
+
+  checkPermission() async {
+    bool res = await SimplePermissions.checkPermission(
+        Permission.WriteExternalStorage);
+    print("permission is " + res.toString());
+    if (res == false) {
+      final res = await SimplePermissions.requestPermission(
+          Permission.WriteExternalStorage);
+      print("permission request result is " + res.toString());
+    }
   }
 
   List<String> features = ["BOOKS", "QUESTION PAPER", "GRADE CARD", "NEWS"];
@@ -64,8 +76,12 @@ class HomePage extends State<Home> {
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Semester(course: "bca",)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Semester(
+                                    course: "bca",
+                                  )));
                     },
                   ),
                   Divider(),
@@ -75,8 +91,12 @@ class HomePage extends State<Home> {
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Master of Computer Application"),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Semester(course: "mca",)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Semester(
+                                    course: "mca",
+                                  )));
                     },
                   ),
                   Divider(),
@@ -124,8 +144,10 @@ class HomePage extends State<Home> {
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => QuestionSemester()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => QuestionSemester()));
                     },
                   ),
                   Divider(),
@@ -166,8 +188,12 @@ class HomePage extends State<Home> {
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Bachelor of Computer Application"),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Grade(course: "BCA",)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Grade(
+                                    course: "BCA",
+                                  )));
                     },
                   ),
                   Divider(),
