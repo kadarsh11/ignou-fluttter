@@ -6,7 +6,6 @@ import '../generic/books.dart';
 import '../ui/exception.dart';
 
 class Semester extends StatefulWidget {
-
   final String course;
   Semester({this.course});
 
@@ -17,7 +16,6 @@ class Semester extends StatefulWidget {
 }
 
 class SemesterState extends State<Semester> {
-  
   String course;
   SemesterState({this.course});
   Books books;
@@ -25,10 +23,10 @@ class SemesterState extends State<Semester> {
     Colors.deepPurpleAccent,
     Colors.deepOrangeAccent,
     Colors.redAccent,
-    Colors.indigoAccent,
+    Colors.green,
+    Colors.purple,
     Colors.black,
-    Colors.greenAccent,
-    Colors.blueAccent
+    Colors.indigoAccent,
   ];
 
   @override
@@ -38,27 +36,39 @@ class SemesterState extends State<Semester> {
   }
 
   fetchData() async {
-    try{
-    String url = 'https://raw.githubusercontent.com/kadarsh11/ignou-fluttter/master/asset/$course.json';
-    var res = await http.get(url);
-    var decodedJson = jsonDecode(res.body);
-    books = Books.fromJson(decodedJson);
-    setState(() {});}
-    catch(e){
+    try {
+      String url =
+          'https://raw.githubusercontent.com/kadarsh11/ignou-fluttter/master/asset/$course.json';
+      var res = await http.get(url);
+      var decodedJson = jsonDecode(res.body);
+      books = Books.fromJson(decodedJson);
+      setState(() {});
+    } catch (e) {
       Navigator.pop(context);
       Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ExceptionUi(),
-                ));
+          context,
+          MaterialPageRoute(
+            builder: (context) => ExceptionUi(),
+          ));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Semester",
+            style: TextStyle(color: Colors.black),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+        ),
         body: books == null
-            ? Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.purple)))
+            ? Center(
+                child: CircularProgressIndicator(
+                    valueColor:
+                        new AlwaysStoppedAnimation<Color>(Colors.purple)))
             : GridView.count(
                 crossAxisCount: 3,
                 children: List.generate(int.tryParse(books.semester),
@@ -83,7 +93,7 @@ class SemesterState extends State<Semester> {
             width: 50.0,
             margin: const EdgeInsets.only(left: 10.0, top: 10.0),
             decoration: new BoxDecoration(
-              color: gridColor[2],
+              color: gridColor[sem-1],
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(8.0),
             ),
