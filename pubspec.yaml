@@ -24,6 +24,7 @@ dependencies:
   dio: ^1.0.6
   open_file: ^1.1.0
   timeago: ^2.0.8
+  simple_permissions: ^0.1.8
 
 dev_dependencies:
   flutter_test:
@@ -40,7 +41,7 @@ flutter:
     - asset/hero.jpg
     - asset/something_went_wrong.png
     - asset/something_went_wrong_1.png
-    - asset/loading.gif
+    - asset/hurray.jpg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
