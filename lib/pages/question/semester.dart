@@ -33,25 +33,32 @@ class SemesterState extends State<QuestionSemester> {
   }
 
   fetchData() async {
-    try{
-    var res = await http.get(url);
-    var decodedJson = jsonDecode(res.body);
-    questionHub = QuestionHub.fromJson(decodedJson);
-    setState(() {});
-    }
-    catch(e){
+    try {
+      var res = await http.get(url);
+      var decodedJson = jsonDecode(res.body);
+      questionHub = QuestionHub.fromJson(decodedJson);
+      setState(() {});
+    } catch (e) {
       Navigator.pop(context);
       Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ExceptionUi(),
-                ));
+          context,
+          MaterialPageRoute(
+            builder: (context) => ExceptionUi(),
+          ));
     }
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Semester",
+            style: TextStyle(color: Colors.black),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.white,
+        ),
         body: questionHub == null
             ? Center(child: CircularProgressIndicator())
             : GridView.count(
@@ -78,7 +85,7 @@ class SemesterState extends State<QuestionSemester> {
             width: 50.0,
             margin: const EdgeInsets.only(left: 10.0, top: 10.0),
             decoration: new BoxDecoration(
-              color: gridColor[2],
+              color: gridColor[sem-1],
               shape: BoxShape.rectangle,
               borderRadius: new BorderRadius.circular(8.0),
             ),
@@ -95,5 +102,3 @@ class SemesterState extends State<QuestionSemester> {
     );
   }
 }
-
-
