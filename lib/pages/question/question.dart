@@ -1,11 +1,42 @@
 import 'package:flutter/material.dart';
 import '../generic/question-gen.dart';
 import './paper-details.dart';
+import 'package:simple_permissions/simple_permissions.dart';
+import '../ui/not-authorized-handler.dart';
 
-class QuestionList extends StatelessWidget {
+class QuestionList extends StatefulWidget{
   final QuestionHub questionHub;
   final int sem;
   QuestionList({this.questionHub, this.sem});
+  @override
+  State<StatefulWidget> createState() {
+    return QuestionListState(questionHub:questionHub,sem:sem);
+  }
+}
+
+class QuestionListState extends State<QuestionList> {
+
+
+      @override
+  void initState() {
+    super.initState();
+    checkPermission();
+  }
+
+  checkPermission() async {
+    bool res = await SimplePermissions.checkPermission(Permission.WriteExternalStorage);
+    print("permission is " + res.toString());
+    if(res==false){
+     Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NotAuthorized(),
+                ));
+    }
+  }
+  final QuestionHub questionHub;
+  final int sem;
+  QuestionListState({this.questionHub, this.sem});
 
   @override
   Widget build(BuildContext context) {
