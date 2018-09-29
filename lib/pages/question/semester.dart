@@ -13,7 +13,7 @@ class QuestionSemester extends StatefulWidget {
 }
 
 class SemesterState extends State<QuestionSemester> {
-  var url = 'https://api.myjson.com/bins/jkbfc';
+  var url = 'https://raw.githubusercontent.com/kadarsh11/ignou-fluttter/master/asset/bca_paper.json';
 
   QuestionHub questionHub;
   List<Color> gridColor = [
