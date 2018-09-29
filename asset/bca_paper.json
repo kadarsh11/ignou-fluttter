@@ -1,0 +1,897 @@
+{
+  "status": "BCA",
+  "semester": "5",
+  "course": [
+    {
+      "semester": "1",
+      "code": "BCS-011",
+      "name": "Computer Basics and PC Software",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1E1wzRe9afz8Csix3avEYCELc6KSd8wIO"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1zEcWwpawytd9rmbtRlzlPagxWW7Al4HT"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1rsMdDB00GHjYhhzXXUDCP1YoLHh13ifF"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1nBYVfj98RrHEOBFYMtY_Njhlg4l1Dutu"
+        }
+      ]
+    },
+    {
+      "semester": "1",
+      "code": "BCS-012",
+      "name": "Mathematics",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1tuKoXRfl8eN6iE4BQkmESi8-s-S8E64d"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1SLOJFsjbW2uspGrmph5NjaN9ptCBaIwF"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1-h6_mU6SA057gczR6sBuH99EThDdBGCB"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1aDhAd9GJ9fbeuzlzyR4yOLB93IZHsIxy"
+        }
+      ]
+    },
+    {
+      "semester": "1",
+      "code": "BCSL-013",
+      "name": "Computer Basics and PC Software Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1S_-Z_ds2nInCDIHysUQfQvQUzPkMMt94"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1-HhoMmtaGRCAeYeuWD5_t6KPvmgoQqri"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=149gI6lOievKU_F9GI1vikeqps2nqPFtC"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1AssmozjrlyVjkySC6JK6-xKxmSdW3Zcm"
+        }
+      ]
+    },
+    {
+      "semester": "1",
+      "code": "ECO-01",
+      "name": "Business Organization",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1lj1_4bLhRD9cIUSE6xloysvpTDR3oHK1"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1VvQIFK9RLxaYoYwbfuO2s2GBnyndfvKk"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1UrEYA9UO5xEcsJCLf0kj3wa5w_S-Uaec"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=17Nohf0Xi0IbdmsJfkBxxWPiClp9HSonn"
+        }
+      ]
+    },
+    {
+      "semester": "1",
+      "code": "FEG-02",
+      "name": "Foundation course in English -2",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1euCJhfmpEBEjG96SmQr8JzeDf7YLUEqH"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1hBCKEgRZdT3d_FouujjrQrmO1q0_PEST"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1Ahjz_7OyRM_d-0fedd3fr91bbFcGEjF7"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1nnsocOcRZiMcAlWzBlTdr-5KqUV8_iJR"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "ECO-02",
+      "name": "Accountancy-1",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1YenP-gf_ZAo7oUgA1UrODEK414P7e3s7"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1b1UlHNKE1U9otMSQNuZnEzN1AzXuLcUL"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1-NK5C-NQWkUIw8xJhdSZX32k0CNmsfHC"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1zgmCQlC4nzsW5I5FPvD1o9IBJ81JEci8"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "MCS-011",
+      "name": "Problem Solving and Programming",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1M9sDZfQou_bKUjO40U9KBMjkQJjoIeke"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1xR7eit-osAUlgt9HQFoBXszc__lRJAuK"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1r6M5d0-TvNV22NduSdrjqY-Gf4M1VVqm"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1LSCJ0veEVnW745cxbI06DfodoSxm2LL-"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "MCS-012",
+      "name": "Computer Organization and Assembly Language Programming",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1ahQNYnjz6-P0BH8CDZczpaSNfJePP_zJ"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1b1VXlE3WiMhUKTInMkad0ROghcih2Z-z"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1btJkrtpzIzeHIoFw7YR9VSwlpwEkO-Vh"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1jR5f61SOBwqPHgeJaFkXexe5LYZTZIdJ"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "MCS-015",
+      "name": "Communication Skills",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=17mOvkcccwKmSBhZ2I940GTuLC1hlivFs"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1rqOIBDEreiOHXT-7tatQW8C3HWPK0UR4"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1C21iSC0XpJAwUh3i3VwEP6S5w8AZmnym"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1u_bGlmm4ptG0-wADV3DK3vc-J5n7_4JP"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "MCS-013",
+      "name": "Discrete Mathematics ",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1-rXhAfach30sY7Hq8hPb5iGeXh53bupC"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1Jut-lQ6jDsIvzmG4nJZxnVoUDdvYz8RV"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1bo8dpH5iDoI5e2LbKfEXpO77UDOtf-70"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1J8TcCvDCJK3eNiRfc14CrmjkDjN6Zj1b"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "BCSL-021",
+      "name": "C Language Programming Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1ge9PAbOoW_j_ySip6Gj5ShrariznQfMr"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1pq0dr0hulPyjLBLKj6OYSTUQlDur-NUY"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1zQ5_nlqeroetlmVProc2XXrkOKVey4Hz"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=17O8bY5J10t587mxy3AE_8dQSJNRVAo23"
+        }
+      ]
+    },
+    {
+      "semester": "2",
+      "code": "BCSL-022",
+      "name": "Assembly Language Programming Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1tRCn9Os_FRQCEkUi2BAUDtMCOhM3T4JN"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1mLA_1WKPR93XrI1TMowNh4PmrOagCy0d"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1-VLxayGBNhGS7lFcBnuteiDiqzEyjGbA"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1HRAPX7TeyKKgmm0ZKNYtrRQTH9Jdi8iG"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "MCS-021",
+      "name": "Data and File Structures",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=13ZJdNn7XQYMR7npCH4iBZ58wM8lUTWLZ"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1FTqBxTaZ5H5Y4_sAyr-i2sPyqbT5sV9Z"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1dygsl08EQYCOaw-2nyB3MfJXkbDFuBHN"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1dewsw4R6RK3OetIo0wvtcvqcHzp1gMvQ"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "MCS-023",
+      "name": "Introduction to Database Management Systems",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1tp2aiK0JIv0cC6WWY6n82ObGwDhxIfqA"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=16zv10Ksn-I_yr38Zpv5qIw_RxLKazAt8"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1WUGK1lAoRSIzl__7-iCkjmVKycoOPz0U"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1rqGpd5J03rrg_h2EKlNmjXlvxbhC3KNZ"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "MCS-014",
+      "name": "Systems Analysis and Design",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1rNyomQTZUcqQrOj6RDDKcsRtTcZPe8bM"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1BlGpx34OHDTpG-0YyYx70qFtcXKujQRk"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1jZEqo5AJXgtKdmTijDAgCrHco9EMUu7t"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1LWu4-K1P9qgZ6G9QDDXjF0AZjllSFTpz"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "BCS-031",
+      "name": "Programming in C++",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1VtsEY0m0OTcMVNwuGkuKYCdn8p5ldul2"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1stgV_BnKq-sAyueUMY3MzEbwT2hgNWvD"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1skquuNOrATEfxNYChAamHV2pRFEXqQtQ"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1-qISIFP9mDOmWuJjcrAWmeALl3-tURfs"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-032",
+      "name": "C++ Programming Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1vbA6YFjPkKokKF9owBcf-cBt-bFXp69v"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=19MQlpWF5Hk8lgRVZFc_MMyctY8tCTNgW"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1F84KRF-zK2sh7-lCgM0Qdtt-BnCqk9eE"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1cf8GwRbeWYwhNZ9zWEke-E95WHG8ujsY"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-033",
+      "name": "Data and File Structures Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1pL2lFJv3GuwRqnlWRg60eRG4K2y9soyD"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1LMUfZtqazuU59-wOmaAwf1fU5p3HLHdO"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1uAW5G9Xwe0jEibQmsu6nq5KJ2EJHNGHp"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1kkYROwrkcbxpvRmFxp5y2pD4adENcelR"
+        }
+      ]
+    },
+    {
+      "semester": "3",
+      "code": "BCSL-034",
+      "name": "DBMS Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1cdnul0W4hsuFHaHGLGBpyQPT70n082CA"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1ACWC91QcR2r63_n_eQXwnweCG7lj4AL-"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1tj7C2j_08D6A0bMC0JT5ikct8k8Qmzlr"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1anRRSVT5w5sv7qVph5RAIqIyMHdU6gjk"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "BCS-040",
+      "name": "Statistical Techniques",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1vF_MVOLuBeqi3k7FgLsuiKLTyY_7jWUD"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=10VhadFi6qrEB8-_PR0om0NbUI7NO99T9"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=11yTDY12affYsLkVhEnpm9SvS48oOw6az"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1dZHR8YMbMttM04j4iQWcVXy1ue5W2205"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "MCS-024",
+      "name": "Object Oriented Technologies and Java Programming",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1o0rBsJzQUkhlPFcnFDBfw8_cFE0Auklv"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1ayVoQlgYWKxsaY6_mTWeazU5X-rypQoZ"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1CSBWn3rAvdUoplDtJhtrTdRR1wwdhgwo"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1c0qhJeVT2g1k-POuzoaI6AKOtbLebbuP"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "BCS-041",
+      "name": "Fundamentals of Computer Networks",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1H4Lb7kzaRDqo7CMo0LpAxDgzHb5sQ1bv"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1fyoy-L0Qty8kgr4R-z5ecapL-uQJUu-M"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1klh3lB2oBSACWGY101fGcO8uaEq84vpT"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=166n2e5QRXeao8yWriOtJUrXFyWbQ1qxf"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "BCS-042",
+      "name": "Introduction to Algorithm Design",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1PKWrEj2PqvP-YDh7zIq4sjcb57ffw87N"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=16YFRrbcAubPJlL4JsnjIBbeB91y3xcKq"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1YTO6SCS9ga-ELgZuE6TCol_S3U8vGANi"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1O9GaNBkEj6eDRECh9Ema4Kq_8UZgTA4o"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "MCSL-016",
+      "name": "Internet Concepts and Web Design",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1EsrTdMyVBH1j6S3hZ0t8g_p0Brndpuvy"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1oIFkfr-ojnzFzG3K9mCgpVHi6g4OHAz1"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1MMclXTJjEVpV5R5wnlQQ-czG1tLg5EEo"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1DkLM0OCM0q6XI7SjWrdG7OIp8M3FHZz7"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "BCSL-043",
+      "name": "Java Programming Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1dKmtrHnxWhVl9wjmxKcmL3LtY10j7RUR"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1zUdagnw-MogD63ADUjIbgAmiyw4njsMG"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1WEh5QRn9fsCc5B-QoGf8Kv32Bq9iB20V"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1dNWksGprgFhRLE3HHcSI6-cHhfhoZAGz"
+        }
+      ]
+    },
+    {
+      "semester": "4",
+      "code": "BCSL-045",
+      "name": "Algorithm Design Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1DRPH2Sgx0vSXivb1WOMtVOUFBqutKNve"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1YFMvTA8Oka7hGf_FuGKvYnhMiLqFK8l8"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1XfZvQBvThU17SjxfIoBaMuw3Ry5tP8S9"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1aSzQNAN514-gkexxUYps442CHphgHlJ0"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCS-051",
+      "name": "Introduction to Software Engineering",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=12v0CKdMBSaqQHapG7X7VPTO9GVwO67h5"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1te_7GE-9RcgczubRRD6nW5fBCXLvTy9I"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1sQ1GdETlikhFAMFI2VhXC_1jFkGJRviT"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1unChZF8SGFUTeZ4tGNrn90PHDEv_7oJg"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCS-052",
+      "name": "Network Programming and Administration",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1XuEEaXl2KJm6JVm3Ncvy8SNDpo4LuJ98"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1UrgOSlbD4gOafegl3iMaV1t3gOTDfxMK"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1sdrmnAsdoqzalCMbmsryc8b-su0JgGfB"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1PiAi2j_vvCaNlLjcmvgzcXSZwRzj8Gf-"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCS-053",
+      "name": "Web Programming",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=12Bcz0svCoHY8RczsOVdfCRS-yNquxErI"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1nmhJh5_Spt2RRDmFGcvk-0jJd-VsR4ky"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1I-BVE10djAUwB4kNwVadV9zURw2jL-T1"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1lNIObTOWZ60SPHHeuXoQtaYXGpiMZZpv"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCS-054",
+      "name": "Computer Oriented Numerical Techniques",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1uQTWCdJetx0EYyJBwnYAWw_UoKCDuGCM"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1ajHpTzhnY4wQ0edDJKxEvLNJ5ILvOwGI"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1CSN-lbSNslZzwNJw6uwCd6MFsEOlq4rH"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1YjEeKG85SfmX6MzXMw6-boQjznRpJ1ha"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCS-055",
+      "name": "Business Communication",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=17td6Togm2-riMbKbvKkLh-PpoU71kCfJ"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1oghWktQrkC99Qjn4WMptPx35AhilNhvQ"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=11cG7kc4q8icB50bk7ac3rggkgUrklxIv"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1S6vP4vmA2UTrNV-mWJVSbhhZs7L8miG3"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCSL-056",
+      "name": "Network Programming and Administration Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1cdd4yMlfH2KV4NoaKp8ibP2Mbdgumek-"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=1KkFKGBINVGhIAw1uY9JPpXR46v4tnNCu"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=10kwfNAg8cvoiKBVruicjXVSKbFtQ20xK"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=17o1gl1CZ9tBz0oWEmSvNFb1Q4Rq78I-W"
+        }
+      ]
+    },
+    {
+      "semester": "5",
+      "code": "BCSL-057",
+      "name": "Web Programming Lab",
+      "question": [
+        {
+          "id": "1",
+          "pname": "PAPER 1",
+          "pdownload": "https://drive.google.com/open?id=1LVi2YNKlIwQ0sOVm5BGqCArPCACLcgb_"
+        },
+        {
+          "id": "2",
+          "pname": "PAPER 2",
+          "pdownload": "https://drive.google.com/open?id=13ISHCed1GAwbBWRveIRqUNRKkdmHhS3Q"
+        },
+        {
+          "id": "3",
+          "pname": "PAPER 3",
+          "pdownload": "https://drive.google.com/open?id=1e-mQatDJLDqw0CA7PydSMJj0Byx76r9C"
+        },
+        {
+          "id": "4",
+          "pname": "PAPER 4",
+          "pdownload": "https://drive.google.com/open?id=1nLeQyS7AGwiEKvAF03FAgDJXp-06FOo2"
+        }
+      ]
+    }
+  ]
+}
