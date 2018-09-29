@@ -1,0 +1,85 @@
+{
+  "status": "B.com",
+  "semester": "1",
+  "course": [
+    {
+      "semester": "1",
+      "code": "ECO-01",
+      "name": "Business Organisation",
+      "download": "https://drive.google.com/open?id=1i_w0nhNFtui40MytjrO-bAvfHIntmWpZ"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-02",
+      "name": "Accountancy-I",
+      "download": "https://drive.google.com/open?id=1ORoNqy1toFufLcIH2NdpFtQNoDLt2gmp"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-03",
+      "name": "Management Theory",
+      "download": "https://drive.google.com/open?id=1TEGsofxa9WWPVdPnPMiuHAGDHTwaMDw6"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-05",
+      "name": "Mercantile Law",
+      "download": "https://drive.google.com/open?id=1uv4oQBb8YfyHgGsc88IokMZ8bjzfrdPr"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-06",
+      "name": "Economic Theory",
+      "download": "https://drive.google.com/open?id=10wS5YlmjMolrAx3UZL0CXc7Kwj_b1yfk"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-07",
+      "name": "Elements of Statistics",
+      "download": "https://drive.google.com/open?id=1tf-7gRPmLBbsu73ncajEFbBt4CF6kai_"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-08",
+      "name": "Company Law",
+      "download": "https://drive.google.com/open?id=10DieuNH9dYfmalMDqWBI_-Mw0pr8433H"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-09",
+      "name": "Money, Banking and Financial Institutions",
+      "download": "https://drive.google.com/open?id=1w82l4ip_IO-1K3jK8crwQpruptW8F0h7"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-10",
+      "name": "Elements of Costing",
+      "download": "https://drive.google.com/open?id=18W1dqnlqxvEUITQ2sK_d4siuh9dQT4he"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-11",
+      "name": "Elements of Income-Tax",
+      "download": "https://drive.google.com/open?id=14ILHMKJxnXMWtOE-rs-1uXZyMYRDeUu5"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-12",
+      "name": "Elements of Auditing",
+      "download": "https://drive.google.com/open?id=12aY_Il_DPGJA-oFuf590OwntChdmrAdU"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-13",
+      "name": "Business Environment",
+      "download": "https://drive.google.com/open?id=1-b9LStt7YkHdRkgNjErX-80Dn_8eX8H4"
+    },
+    {
+      "semester": "1",
+      "code": "ECO-14",
+      "name": "Accountancy II",
+      "download": "https://drive.google.com/open?id=1ets0jez00mB5uSbOTBvAYd-p3qSXjiEh"
+    }
+
+  ]
+}
