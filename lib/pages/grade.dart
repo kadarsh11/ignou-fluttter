@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './result.dart';
+import './generic/ads.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
 class Grade extends StatefulWidget {
   final String course;
@@ -13,14 +15,22 @@ class Grade extends StatefulWidget {
 
 class GradeState extends State<Grade> {
   String course;
-
   GradeState(this.course);
 
   final _formKey = GlobalKey<FormState>();
   final myController = TextEditingController();
 
+    @override
+  void initState() {
+    super.initState();
+     Ads.setBannerAd(size:AdSize.mediumRectangle);
+     Ads.showBannerAd(this);
+  }
+
   @override
   void dispose() {
+    Ads.hideBannerAd();
+    Ads.dispose();
     myController.dispose();
     super.dispose();
   }
@@ -67,6 +77,8 @@ class GradeState extends State<Grade> {
                     textColor: Colors.white,
                     onPressed: () {
                       if (_formKey.currentState.validate()) {
+                        Ads.hideBannerAd();
+                        Ads.showFullScreenAd(this);
                         print(myController.text);
                         Navigator.push(
                             context,

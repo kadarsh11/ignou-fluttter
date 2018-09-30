@@ -4,6 +4,8 @@ import '../generic/question-gen.dart';
 import 'package:http/http.dart' as http;
 import 'question.dart';
 import '../ui/exception.dart';
+import '../generic/ads.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
 class QuestionSemester extends StatefulWidget {
   @override
@@ -29,7 +31,16 @@ class SemesterState extends State<QuestionSemester> {
   @override
   void initState() {
     super.initState();
+    Ads.setBannerAd(size:AdSize.mediumRectangle);
+    Ads.showBannerAd(this);
     fetchData();
+  }
+     @override
+  void dispose() {
+    Ads.clearBannerListeners();
+    Ads.hideBannerAd();
+    Ads.dispose();
+    super.dispose();
   }
 
   fetchData() async {
@@ -37,13 +48,14 @@ class SemesterState extends State<QuestionSemester> {
       var res = await http.get(url);
       var decodedJson = jsonDecode(res.body);
       questionHub = QuestionHub.fromJson(decodedJson);
+      
       setState(() {});
     } catch (e) {
       Navigator.pop(context);
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ExceptionUi(),
+            builder: (context) => ExceptionUi(error: "No Internet Connection",),
           ));
     }
   }
@@ -72,6 +84,8 @@ class SemesterState extends State<QuestionSemester> {
       padding: const EdgeInsets.all(12.0),
       child: InkWell(
         onTap: () {
+          Ads.hideBannerAd();
+    Ads.dispose();
           Navigator.push(
               context,
               MaterialPageRoute(

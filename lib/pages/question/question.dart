@@ -3,37 +3,47 @@ import '../generic/question-gen.dart';
 import './paper-details.dart';
 import 'package:simple_permissions/simple_permissions.dart';
 import '../ui/not-authorized-handler.dart';
+import '../generic/ads.dart';
 
-class QuestionList extends StatefulWidget{
+class QuestionList extends StatefulWidget {
   final QuestionHub questionHub;
   final int sem;
   QuestionList({this.questionHub, this.sem});
   @override
   State<StatefulWidget> createState() {
-    return QuestionListState(questionHub:questionHub,sem:sem);
+    return QuestionListState(questionHub: questionHub, sem: sem);
   }
 }
 
 class QuestionListState extends State<QuestionList> {
-
-
-      @override
+  @override
   void initState() {
     super.initState();
     checkPermission();
   }
 
+  @override
+  void dispose() {
+    Ads.hideBannerAd();
+    Ads.dispose();
+    super.dispose();
+  }
+
   checkPermission() async {
-    bool res = await SimplePermissions.checkPermission(Permission.WriteExternalStorage);
+    bool res = await SimplePermissions.checkPermission(
+        Permission.WriteExternalStorage);
+        
     print("permission is " + res.toString());
-    if(res==false){
-     Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => NotAuthorized(),
-                ));
+    if (res == false) {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => NotAuthorized(),
+          ));
+     Ads.showBannerAd(this);           
     }
   }
+
   final QuestionHub questionHub;
   final int sem;
   QuestionListState({this.questionHub, this.sem});
@@ -54,18 +64,20 @@ class QuestionListState extends State<QuestionList> {
   }
 
   Widget _listView(var res, BuildContext context) {
-
     // List<Question> question=res.question;
 
     return InkWell(
       onTap: () {
+        Ads.hideBannerAd();
+        Ads.showFullScreenAd(this);
         Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => PaperDetails(
-                        question: res.question,
-                        courseCode: res.code,
-                      )));
+            context,
+            MaterialPageRoute(
+                builder: (context) => PaperDetails(
+                      question: res.question,
+                      courseCode: res.code,
+                      title: res.name,
+                    )));
       },
       child: Column(children: [
         ListTile(

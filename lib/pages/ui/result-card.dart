@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class ResultCard extends StatelessWidget {
@@ -26,14 +25,14 @@ class ResultCard extends StatelessWidget {
       this.tPractical,
       this.status});
 
-  void _showAlert(BuildContext context) {
-AlertDialog dialog = new AlertDialog(
-  content: new Container(
-    child: Text("hola"),
-  )
-  );
-    showDialog(context: context,child: dialog);
-}
+//   void _showAlert(BuildContext context) {
+// AlertDialog dialog = new AlertDialog(
+//   content: new Container(
+//     child: Text("hola"),
+//   )
+//   );
+//     showDialog(context: context,child: dialog);
+// }
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +138,7 @@ AlertDialog dialog = new AlertDialog(
       height: 140.0,
       margin: const EdgeInsets.only(top: 16.0, bottom: 8.0),
       child: new FlatButton(
-        onPressed: (){_showAlert(context);},
+        onPressed: (){print("Details page coming soon");},
         child: Stack(
           children: <Widget>[planetCard, planetThumbnail],
         ),

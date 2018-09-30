@@ -4,6 +4,9 @@ import './news.dart';
 import './books/semester.dart';
 import './question/semester.dart';
 import './grade.dart';
+import './generic/ads.dart';
+
+const String testDevice = "6B3275A219CC14AB01E774687EC3F4B2";
 
 class Home extends StatefulWidget {
   @override
@@ -13,9 +16,40 @@ class Home extends StatefulWidget {
 }
 
 class HomePage extends State<Home> {
+
   @override
   void initState() {
     super.initState();
+    Ads.init('---------- PUBLISHER ADD IP ---------------',
+        keywords: <String>[
+          'education',
+          'books',
+          'result',
+          'news',
+          'University',
+          'Open University',
+          'informative',
+          'ignou study material',
+          'entertainment',
+          'informative',
+          'creativity',
+          'ignou question paper',
+          'study',
+          'question paper',
+          'ignou official',
+          'fun',
+          'tutorial',
+          'ignou grade card',
+          'ignou result',
+          'Indira gandhi open university',
+          'News ignou',
+          'ignou books',
+        ],
+        birthday: DateTime.now(),
+        testDevices: testDevice != null ? <String>[testDevice] : null,
+        testing: false,
+        );
+        
     checkPermission();
     insertData();
   }
@@ -29,6 +63,13 @@ class HomePage extends State<Home> {
           Permission.WriteExternalStorage);
       print("permission request result is " + res.toString());
     }
+  }
+
+  @override
+  void dispose() {
+    Ads.hideBannerAd();
+    Ads.dispose();
+    super.dispose();
   }
 
   List<String> features = ["BOOKS", "QUESTION PAPER", "GRADE CARD", "NEWS"];
@@ -105,6 +146,14 @@ class HomePage extends State<Home> {
                     title: Text("B.Com",
                         style: new TextStyle(fontWeight: FontWeight.bold)),
                     subtitle: Text("Bachelor of Commerce"),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Semester(
+                                    course: "bcom",
+                                  )));
+                    },
                   ),
                   Divider()
                 ],
@@ -231,7 +280,7 @@ class HomePage extends State<Home> {
                   centerTitle: true,
                   title: Text("IGNOU",
                       style: TextStyle(
-                        color: Colors.deepPurpleAccent,
+                        color: Colors.purple,
                         fontSize: 16.0,
                       )),
                   background: Image.asset(
@@ -258,18 +307,23 @@ class HomePage extends State<Home> {
     Color gradientEnd = type.endGradient;
     return InkWell(
       onTap: () {
+        Ads.hideBannerAd();
         if (type.feature.toLowerCase() == "books") {
+          Ads.showFullScreenAd(this);
           _showModalSheetBooks();
         }
         if (type.feature.toLowerCase() == "news") {
+          Ads.showFullScreenAd(this);
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => News()));
           print("News");
         }
         if (type.feature.toLowerCase() == "question paper") {
+          Ads.showFullScreenAd(this);
           _showModalSheetQuestion();
         }
         if (type.feature.toLowerCase() == "grade card") {
+          Ads.showFullScreenAd(this);
           _showModalSheetGrade();
         }
       },

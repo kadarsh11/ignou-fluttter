@@ -81,7 +81,7 @@ class ResultState extends State<Result> with SingleTickerProviderStateMixin {
       Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => ExceptionUi(),
+                  builder: (context) => ExceptionUi(error: "Something Went Wrong \n Try again later",),
                 ));
     }
   }

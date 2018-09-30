@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "740409199694",
+    "firebase_url": "https://ignou-fdaf4.firebaseio.com",
+    "project_id": "ignou-fdaf4",
+    "storage_bucket": "ignou-fdaf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740409199694:android:960c19ad9654842a",
+        "android_client_info": {
+          "package_name": "com.adarshkumar.ignou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740409199694-9t2gksb83i3mlesghosukp20q6s3gt47.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.adarshkumar.ignou",
+            "certificate_hash": "6574b57a2c376585b5cfcd6d5c9005667d570db9"
+          }
+        },
+        {
+          "client_id": "740409199694-t17bi9tmaerofbl0pu5cd0niuti6lehu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYJ9GyZqO55OOLwoxEs_YljF5o9tUuSzg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740409199694-t17bi9tmaerofbl0pu5cd0niuti6lehu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

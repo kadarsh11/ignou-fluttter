@@ -1,29 +1,31 @@
 import 'dart:async';
 import 'dart:io';
 
-import '../generic/ads.dart';
-import './exception.dart';
+import '../ui/exception.dart';
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
+import '../generic/ads.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 
-class BooksDownload extends StatefulWidget {
+class QuestionDownload extends StatefulWidget {
   final String course;
   final String id;
+  final String pid;
   final String title;
-  BooksDownload({this.course, this.id, this.title});
+  QuestionDownload({this.course, this.id, this.title,this.pid});
   @override
-  BooksDownloadState createState() {
-    return new BooksDownloadState(course: course, id: id, title: title);
+  QuestionDownloadState createState() {
+    return new QuestionDownloadState(course: course, id: id, title: title,pid: pid);
   }
 }
 
-class BooksDownloadState extends State<BooksDownload> {
+class QuestionDownloadState extends State<QuestionDownload> {
   String course;
   String id;
+  String pid;
   String title;
-  BooksDownloadState({this.course, this.id, this.title});
+  QuestionDownloadState({this.course, this.id, this.title,this.pid});
   //12R-z5mr2GSzum2bMCRIqwXMcgkeGWRB9
 
   bool downloading = false;
@@ -32,30 +34,29 @@ class BooksDownloadState extends State<BooksDownload> {
   @override
   void initState() {
     super.initState();
-    Ads.setBannerAd(size: AdSize.mediumRectangle);
+    Ads.setBannerAd(size:AdSize.mediumRectangle);
     Ads.showBannerAd(this);
     checkDirectory();
   }
-
-  var path;
-
-  @override
+  
+ @override
   void dispose() {
     Ads.hideBannerAd();
-    Ads.showFullScreenAd(this);
     Ads.dispose();
     super.dispose();
   }
 
+  var path;
+
   Future<void> checkDirectory() async {
     var dir = await getExternalStorageDirectory();
-    final myDir = new Directory('${dir.path}/ignou/books');
+    final myDir = new Directory('${dir.path}/ignou/questions');
     myDir.exists().then((isThere) {
       isThere
           ? print("Directory Existed")
           :
           // Creating new Directory
-          new Directory('${dir.path}/ignou/books')
+          new Directory('${dir.path}/ignou/questions')
               .create(recursive: true)
               .then((Directory directory) {
               print(directory.path);
@@ -66,14 +67,14 @@ class BooksDownloadState extends State<BooksDownload> {
 
   Future<void> downloadFile() async {
     setState(() {
-      downloading = true;
-    });
+          downloading = true;
+        });
     final imgUrl =
         "https://drive.google.com/uc?authuser=0&id=$id&export=download";
     Dio dio = Dio();
     var dir = await getExternalStorageDirectory();
     try {
-      await dio.download(imgUrl, "${dir.path}/ignou/books/$course.zip",
+      await dio.download(imgUrl, "${dir.path}/ignou/questions/${course}_p$pid.pdf",
           onProgress: (rec, total) {
         setState(() {
           downloading = true;
@@ -91,7 +92,6 @@ class BooksDownloadState extends State<BooksDownload> {
             builder: (context) => ExceptionUi(),
           ));
     }
-
     setState(() {
       downloading = false;
     });
@@ -103,7 +103,7 @@ class BooksDownloadState extends State<BooksDownload> {
   Widget build(BuildContext context) {
     if (completed) {
       Ads.hideBannerAd();
-      Ads.showFullScreenAd();
+      Ads.showFullScreenAd(this);
     }
     return Scaffold(
         backgroundColor: Colors.white,
@@ -127,9 +127,7 @@ class BooksDownloadState extends State<BooksDownload> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            CircularProgressIndicator(
-                                valueColor: new AlwaysStoppedAnimation<Color>(
-                                    Colors.white)),
+                            CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.white)),
                             SizedBox(
                               height: 20.0,
                             ),
@@ -158,14 +156,21 @@ class BooksDownloadState extends State<BooksDownload> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Text(
+                     Text(
                         title,
                         style: TextStyle(
                             color: Colors.purple,
                             fontSize: 35.0,
                             fontWeight: FontWeight.w300),
+                      ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        "Paper-$pid",
+                        style: TextStyle(
+                            color: Colors.purple,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.w400),
                       ),
                     ),
                     Padding(
@@ -206,7 +211,7 @@ class BooksDownloadState extends State<BooksDownload> {
                                         SizedBox(
                                           height: 10.0,
                                         ),
-                                        Text("./ignou/books/$course.zip",
+                                        Text("./ignou/questions/${course}_p$pid.pdf",
                                             style: TextStyle(
                                                 color: Colors.green,
                                                 fontSize: 18.0,
@@ -222,9 +227,10 @@ class BooksDownloadState extends State<BooksDownload> {
                                           color: Colors.white, fontSize: 21.0),
                                     ),
                                     onPressed: () {
+                                      Ads.hideBannerAd();
                                       downloadFile();
                                     },
-                                  ),
+                                  )
                           ],
                         ),
                       ),

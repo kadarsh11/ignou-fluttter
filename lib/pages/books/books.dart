@@ -3,6 +3,7 @@ import '../generic/books.dart';
 import 'package:simple_permissions/simple_permissions.dart';
 import '../ui/books-download.dart';
 import '../ui/not-authorized-handler.dart';
+import '../generic/ads.dart';
 
 class BooksList extends StatefulWidget{
   final Books books;
@@ -24,6 +25,13 @@ class BooksListState extends State<BooksList> {
   void initState() {
     super.initState();
     checkPermission();
+  }
+
+    @override
+  void dispose() {
+    Ads.hideBannerAd();
+    Ads.dispose();
+    super.dispose();
   }
 
   checkPermission() async {

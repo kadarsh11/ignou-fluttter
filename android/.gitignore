@@ -8,3 +8,6 @@
 /build
 /captures
 GeneratedPluginRegistrant.java
+/key.jks
+/app/key.jks
+/key.properties
